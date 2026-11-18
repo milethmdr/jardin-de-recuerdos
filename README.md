@@ -90,8 +90,4 @@ npm run preview    # prueba la versión de producción
 1. Sube el proyecto a un repositorio **público** de GitHub.
 2. En [vercel.com](https://vercel.com/) elige **Add New → Project** e importa el repositorio.
 3. Vercel detecta **Vite** automáticamente (Build Command: `npm run build`, Output Directory: `dist`).
-4. Pulsa **Deploy**. Cada `git push` a `main` vuelve a desplegar el sitio.
-
-## 📝 Autor
-
-Proyecto del laboratorio de SQLite + GitHub + Vercel.
+4. Pulse **Deploy**. Cada `git push` a `main` vuelve a desplegar el sitio.

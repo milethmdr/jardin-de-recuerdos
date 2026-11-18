@@ -1,18 +1,19 @@
 :root {
-  --bg: #12241b;
-  --bg-2: #1d3a2a;
-  --papel: #fbf6ea;
+  --bg: #fde8e4;
+  --bg-2: #e3f3e2;
+  --papel: #fffdf8;
   --papel-2: #f2ead6;
   --tinta: #2b2a24;
   --suave: #6b6a5e;
   --dorado: #ffd166;
-  --verde: #7fc97f;
-  --verde-osc: #2e7d32;
+  --verde: #5fae6e;
+  --verde-osc: #2f6b45;
+  --acento: #d9457a;
   --agua: #2b7bb9;
   --peligro: #b3261e;
-  --crema: #f3ecd9;
+  --crema: #23402f;
   --radio: 18px;
-  --sombra: 0 10px 30px rgba(0, 0, 0, 0.28);
+  --sombra: 0 10px 28px rgba(35, 64, 47, 0.16);
   --fuente-titulo: 'Fraunces', Georgia, 'Times New Roman', serif;
   --fuente: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
@@ -35,24 +36,24 @@ body {
   line-height: 1.5;
   color: var(--crema);
   background:
-    radial-gradient(900px 500px at 85% -10%, rgba(255, 209, 102, 0.12), transparent 60%),
-    radial-gradient(700px 500px at 0% 30%, rgba(127, 201, 127, 0.1), transparent 60%),
-    linear-gradient(180deg, var(--bg-2), var(--bg) 70%);
+    radial-gradient(900px 500px at 85% -10%, rgba(255, 209, 102, 0.35), transparent 60%),
+    radial-gradient(700px 500px at 0% 30%, rgba(240, 98, 146, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2) 75%);
   background-attachment: fixed;
 }
 
-/* Luciérnagas decorativas */
+/* Pétalos y destellos decorativos */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 12% 22%, rgba(255, 224, 130, 0.9) 0 2px, transparent 3px),
-    radial-gradient(circle at 78% 14%, rgba(255, 224, 130, 0.8) 0 2px, transparent 3px),
-    radial-gradient(circle at 92% 62%, rgba(255, 224, 130, 0.9) 0 2px, transparent 3px),
-    radial-gradient(circle at 30% 80%, rgba(255, 224, 130, 0.8) 0 2px, transparent 3px),
-    radial-gradient(circle at 55% 45%, rgba(255, 224, 130, 0.7) 0 1.5px, transparent 3px);
+    radial-gradient(circle at 12% 22%, rgba(240, 98, 146, 0.7) 0 3px, transparent 4px),
+    radial-gradient(circle at 78% 14%, rgba(255, 183, 77, 0.8) 0 3px, transparent 4px),
+    radial-gradient(circle at 92% 62%, rgba(167, 139, 250, 0.7) 0 3px, transparent 4px),
+    radial-gradient(circle at 30% 80%, rgba(240, 98, 146, 0.6) 0 3px, transparent 4px),
+    radial-gradient(circle at 55% 45%, rgba(255, 183, 77, 0.6) 0 2px, transparent 3px);
   animation: titilar 4s ease-in-out infinite alternate;
   opacity: 0.6;
 }
@@ -79,7 +80,7 @@ body::before {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--verde);
+  color: var(--verde-osc);
   font-weight: 700;
 }
 
@@ -95,12 +96,12 @@ h1 {
 h1 em {
   font-style: italic;
   font-weight: 400;
-  color: var(--dorado);
+  color: var(--acento);
 }
 
 .lema {
   margin: 10px 0 0;
-  color: rgba(243, 236, 217, 0.8);
+  color: rgba(35, 64, 47, 0.8);
   max-width: 46ch;
 }
 
@@ -134,14 +135,14 @@ h1 em {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid var(--dorado);
+  outline: 3px solid var(--acento);
   outline-offset: 2px;
 }
 
 .btn-primario {
-  background: var(--dorado);
-  color: #2b2208;
-  box-shadow: 0 6px 18px rgba(255, 209, 102, 0.28);
+  background: var(--verde-osc);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(47, 107, 69, 0.3);
 }
 
 .btn-plantar {
@@ -156,7 +157,7 @@ textarea:focus-visible {
 }
 
 .panel .btn-suave {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(35, 64, 47, 0.1);
   color: var(--crema);
 }
 
@@ -190,8 +191,9 @@ textarea:focus-visible {
 .panel {
   padding: 16px;
   border-radius: var(--radio);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(35, 64, 47, 0.12);
+  box-shadow: 0 4px 16px rgba(35, 64, 47, 0.08);
   backdrop-filter: blur(6px);
 }
 
@@ -209,7 +211,7 @@ textarea:focus-visible {
   min-height: 38px;
   padding: 0 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(35, 64, 47, 0.25);
   background: transparent;
   color: var(--crema);
   font: inherit;
@@ -223,21 +225,21 @@ textarea:focus-visible {
   font-size: 0.78rem;
   padding: 1px 7px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(35, 64, 47, 0.1);
 }
 
 .chip:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(35, 64, 47, 0.08);
 }
 
 .chip.activo {
-  background: var(--dorado);
-  border-color: var(--dorado);
-  color: #2b2208;
+  background: var(--verde-osc);
+  border-color: var(--verde-osc);
+  color: #fff;
 }
 
 .chip.activo b {
-  background: rgba(43, 34, 8, 0.15);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .filtros {
@@ -283,7 +285,7 @@ textarea {
 
 .conteo {
   margin: 20px 4px 12px;
-  color: rgba(243, 236, 217, 0.75);
+  color: rgba(35, 64, 47, 0.75);
   font-weight: 600;
   min-height: 1.5em;
 }
@@ -404,7 +406,7 @@ textarea {
   grid-column: 1 / -1;
   padding: 48px 20px;
   text-align: center;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(35, 64, 47, 0.25);
   border-radius: var(--radio);
 }
 
@@ -419,7 +421,7 @@ textarea {
 
 .vacio p {
   margin: 0 0 16px;
-  color: rgba(243, 236, 217, 0.8);
+  color: rgba(35, 64, 47, 0.8);
 }
 
 .cargando {
@@ -441,7 +443,7 @@ textarea {
   margin-top: 40px;
   text-align: center;
   font-size: 0.88rem;
-  color: rgba(243, 236, 217, 0.6);
+  color: rgba(35, 64, 47, 0.65);
 }
 
 /* ---------- Diálogos ---------- */
@@ -562,7 +564,7 @@ dialog::backdrop {
 }
 
 .opcion input:focus-visible + span {
-  outline: 3px solid var(--dorado);
+  outline: 3px solid var(--acento);
   outline-offset: 2px;
 }
 
@@ -586,7 +588,7 @@ dialog::backdrop {
   padding: 12px 20px;
   border-radius: 999px;
   background: var(--crema);
-  color: #1d2a22;
+  color: #fff;
   font-weight: 700;
   box-shadow: var(--sombra);
   transform: translate(-50%, 30px);
