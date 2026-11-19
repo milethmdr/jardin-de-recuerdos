@@ -1,25 +1,25 @@
-# 🌸 El Jardín de los Recuerdos
+#  El Jardín de los Recuerdos
 
 Un sitio web donde **plantas recuerdos** (un título, un texto, una fecha y una emoción) y los ves **crecer como flores digitales**. Cada emoción tiene su propia flor: girasol (alegría), rosa (amor), lavanda (nostalgia), nomeolvides (tristeza), margarita (gratitud) y tulipán (esperanza).
 
-Las flores pasan por etapas —**brote → capullo → floreciendo → plena flor**— según el tiempo que lleva plantado el recuerdo y las veces que lo has **regado** 💧.
+Las flores pasan por etapas —**brote → capullo → floreciendo → plena flor**— según el tiempo que lleva plantado el recuerdo y las veces que lo has **regado** .
 
-- 🌐 **Sitio desplegado (Vercel):** _pega aquí tu URL de Vercel_
-- 🐙 **Repositorio:** _pega aquí tu URL de GitHub_
+-  **Sitio desplegado (Vercel):** https://jardin-de-recuerdos-kappa.vercel.app
+-  **Repositorio:** https://github.com/milethmdr/jardin-de-recuerdos
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 | Operación | Cómo se usa en el sitio |
 | --- | --- |
-| **Crear** | Botón **🌱 Plantar un recuerdo** (título, texto, fecha y emoción). |
+| **Crear** | Botón ** Plantar un recuerdo** (título, texto, fecha y emoción). |
 | **Leer** | Cada recuerdo aparece como una tarjeta con su flor, en el jardín. |
-| **Actualizar** | **✏️ Editar** cambia el contenido; **💧 Regar** suma un riego y hace crecer la flor. |
-| **Eliminar** | **🗑️** arranca la flor (con confirmación). |
+| **Actualizar** | ** Editar** cambia el contenido; ** Regar** suma un riego y hace crecer la flor. |
+| **Eliminar** | **** arranca la flor (con confirmación). |
 | **Filtrar** | Por emoción, rango de fechas, texto de búsqueda y orden (reciente, antiguo, más regados). |
 
 Los datos **persisten al recargar la página**. La primera vez que se abre el sitio se plantan 3 recuerdos de ejemplo.
 
-## 🗄️ Cómo usa SQLite
+##  Cómo usa SQLite
 
 Vercel es *serverless* (sistema de archivos de solo lectura), así que se usa la **Opción B** del laboratorio:
 
@@ -41,16 +41,16 @@ CREATE TABLE recuerdos (
 );
 ```
 
-> Como la base vive en el navegador, cada visitante tiene **su propio jardín** (no se comparte entre dispositivos).
+> por cierto Como la base vive en el navegador, cada visitante tiene **su propio jardín** (no se comparte entre dispositivos).
 
-## 🧰 Tecnologías
+## Tecnologías
 
 - [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [sql.js](https://github.com/sql-js/sql.js) (SQLite en el navegador)
 - SVG generado por código para las flores, HTML y CSS (sin frameworks)
 - [Vercel](https://vercel.com/) para el despliegue y [GitHub](https://github.com/) para el código
 
-## 📁 Estructura
+##  Estructura
 
 ```
 jardin-de-recuerdos/
@@ -74,20 +74,42 @@ jardin-de-recuerdos/
 
 Patrón **MVC**: el *modelo* habla con SQLite, la *vista* dibuja el DOM y el *controlador* los conecta.
 
-## ▶️ Cómo ejecutarlo en tu computadora
+##  Cómo ejecutarlo en su compu
 
-Necesitas [Node.js](https://nodejs.org/) 18 o superior.
+Necesitas [Node.js](https://nodejs.org/) 18 o superior y [Git](https://git-scm.com/).
+
+**1. Clone el repositorio y entre a la carpeta del proyecto:**
+
+```bash
+git clone https://github.com/milethmdr/jardin-de-recuerdos.git
+cd jardin-de-recuerdos
+```
+
+>  Los comandos de `npm` deben ejecutarse **dentro** de la carpeta `jardin-de-recuerdos` (donde está el archivo `package.json`). Si ve el error `ENOENT: no such file or directory, open package.json`, es porque falta el `cd`.
+
+**2. Instala las dependencias y arranca el proyecto:**
 
 ```bash
 npm install        # instala dependencias
 npm run dev        # servidor de desarrollo en http://localhost:5173
+```
+
+**3. Abre el navegador** en `http://localhost:5173`.
+
+**Otros comandos útiles:**
+
+```bash
 npm run build      # genera la carpeta dist/ (revisa tipos con TypeScript)
 npm run preview    # prueba la versión de producción
 ```
 
-## 🚀 Cómo desplegarlo en Vercel
+##  Cómo desplegarlo en Vercel
 
-1. Sube el proyecto a un repositorio **público** de GitHub.
+1. Suba el proyecto a un repositorio **público** de GitHub.
 2. En [vercel.com](https://vercel.com/) elige **Add New → Project** e importa el repositorio.
 3. Vercel detecta **Vite** automáticamente (Build Command: `npm run build`, Output Directory: `dist`).
-4. Pulse **Deploy**. Cada `git push` a `main` vuelve a desplegar el sitio.
+4. Pulsa **Deploy**. Cada `git push` a `main` vuelve a desplegar el sitio.
+
+## Autor
+
+Proyecto del laboratorio de SQLite + GitHub + Vercel.
